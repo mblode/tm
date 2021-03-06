@@ -3,10 +3,17 @@ name = "tm"
 version = "0.1.0"
 authors = ["Matthew Blode <m@blode.co>"]
 edition = "2018"
+description = "TM is a minimal text editor written in Rust"
+documentation = "https://docs.rs/tm"
+readme = "README.md"
+repository = "https://github.com/mblode/tm/"
+license = "MIT"
+keywords = ["text-editor", "text", "kilo", "hecto"]
+categories = ["command-line-utilities", "text-editors"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 clap = { version = "3.0.0-beta.2", features = ["yaml"] }
 dirs-next = "2.0.0"
-termion = "1"
+crossterm = { version = "0.19", features = ["event-stream"] }
